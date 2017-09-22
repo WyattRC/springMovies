@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>WeirdlySpecificMovieSearch</title>
+</head>
+<body>
+<a href="/">HOME</a>
+<a href="now-playing.html">NPIT</a>
+<h1>Medium Popularity with long names (some weird hipster search)</h1>
+
+<div th:each="movie : ${mediumPopularLongName}">
+    <img width="150px" th:src="'http://image.tmdb.org/t/p/original' + ${movie.posterPath}"/>
+    <span th:text="${movie.title}"></span>
+</div>
+
+</body>
+</html>
